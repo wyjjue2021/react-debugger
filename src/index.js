@@ -1,23 +1,19 @@
 /*
- * @Author: your name
- * @Date: 2022-03-28 18:49:15
- * @LastEditTime: 2022-03-28 19:08:02
- * @LastEditors: your name
- * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- * @FilePath: /个人工作/react-dev/src/index.js
+ * @Author: 吴俊杰 20717@etransfar.com
+ * @Date: 2022-04-18 15:12:39
+ * @LastEditors: 吴俊杰 20717@etransfar.com
+ * @LastEditTime: 2022-06-14 09:06:30
+ * @FilePath: /个人工作/react-debugger/src/index.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+const root = createRoot(document.getElementById("root"));
+root.render(<App></App>);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

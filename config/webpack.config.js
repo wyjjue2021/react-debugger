@@ -318,12 +318,17 @@ module.exports = function (webpackEnv) {
           "scheduler/tracing": "scheduler/tracing-profiling",
         }),
         ...(modules.webpackAliases || {}),
-        react: path.resolve(__dirname, "../src/react/packages/react"),
-        "react-dom": path.resolve(__dirname, "../src/react/packages/react-dom"),
-        shared: path.resolve(__dirname, "../src/react/packages/shared"),
+        react: path.resolve(__dirname, `../src/react/v18/react`),
+        "react-dom": path.resolve(__dirname, `../src/react/v18/react-dom`),
+        "legacy-events": path.resolve(
+          __dirname,
+          `../src/react/v18/legacy-events`
+        ),
+        shared: path.resolve(__dirname, `../src/react/v18/shared`),
+        scheduler: path.resolve(__dirname, `../src/react/v18/scheduler`),
         "react-reconciler": path.resolve(
           __dirname,
-          "../src/react/packages/react-reconciler"
+          `../src/react/v18/react-reconciler`
         ),
       },
       plugins: [
